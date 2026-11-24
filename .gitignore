@@ -1,0 +1,13 @@
+# Raw unsorted dataset
+book-covers/
+
+# Rejected images outside the active collection
+book-covers-rejected/
+
+# Server temporary caches
+mosaic_cache/
+test_mosaic.jpg
+__pycache__/
+*.pyc
+.DS_Store
+
