@@ -1128,6 +1128,295 @@
     .modal-close-btn:hover {
       background: #333333;
     }
+
+    /* ---------------------------------------------------- */
+    /* PAGE 3: ΔE COLORIMETRY CHALLENGE STYLES              */
+    /* ---------------------------------------------------- */
+    .trial-view-inner {
+      padding: 24px 36px 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      max-width: 960px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .trial-telemetry-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--border-dark);
+      background: var(--surface);
+    }
+
+    @media (max-width: 700px) {
+      .trial-telemetry-strip {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .telemetry-cell {
+      padding: 10px 14px;
+      border-right: 1px solid var(--border-light);
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .telemetry-cell:last-child {
+      border-right: none;
+    }
+
+    .telemetry-lbl {
+      font-family: var(--mono-font);
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+    }
+
+    .telemetry-val {
+      font-family: var(--mono-font);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .trial-workbench {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid var(--border-dark);
+      background: var(--surface);
+    }
+
+    @media (max-width: 780px) {
+      .trial-workbench {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .trial-pane {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .trial-pane:first-child {
+      border-right: 1px solid var(--border-dark);
+    }
+
+    @media (max-width: 780px) {
+      .trial-pane:first-child {
+        border-right: none;
+        border-bottom: 1px solid var(--border-dark);
+      }
+    }
+
+    .trial-pane-header {
+      padding: 9px 14px;
+      background: #f9f8f4;
+      border-bottom: 1px solid var(--border-dark);
+      font-family: var(--mono-font);
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-secondary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .trial-specimen-stage {
+      background: #eeece5;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 300px;
+      flex: 1;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .trial-specimen-stage img {
+      max-height: 250px;
+      max-width: 100%;
+      border: 1px solid var(--border-dark);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: block;
+    }
+
+    .trial-specimen-footer {
+      padding: 10px 14px;
+      font-family: var(--mono-font);
+      font-size: 10px;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .trial-dial-body {
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      flex: 1;
+      justify-content: space-between;
+    }
+
+    .trial-wheel-wrap {
+      position: relative;
+      width: 180px;
+      height: 180px;
+      cursor: crosshair;
+      touch-action: none;
+    }
+
+    .trial-brightness-row {
+      width: 100%;
+      max-width: 260px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .trial-brightness-row input[type="range"] {
+      flex: 1;
+      accent-color: var(--border-dark);
+      cursor: pointer;
+    }
+
+    .trial-guess-swatch-wrap {
+      width: 100%;
+      border: 1px solid var(--border-dark);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .trial-guess-swatch {
+      height: 44px;
+      width: 100%;
+      background: #A33327;
+    }
+
+    .trial-guess-caption {
+      padding: 5px 10px;
+      background: #f9f8f4;
+      border-top: 1px solid var(--border-light);
+      font-family: var(--mono-font);
+      font-size: 10px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .trial-actions-bar {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .trial-result-panel {
+      display: none;
+      border: 1px solid var(--border-dark);
+      background: var(--surface);
+    }
+
+    .trial-result-panel.visible {
+      display: block;
+    }
+
+    .trial-split-field {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 68px;
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .split-half {
+      display: flex;
+      align-items: flex-end;
+      padding: 8px 12px;
+      font-family: var(--mono-font);
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .trial-result-body {
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .trial-grade-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 12px;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 12px;
+    }
+
+    .trial-grade-title {
+      font-family: var(--serif-font);
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .trial-delta-badge {
+      font-family: var(--mono-font);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border: 1px solid var(--border-dark);
+      background: #f9f8f4;
+    }
+
+    .trial-diagnostic-note {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .trial-axis-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--border-light);
+      background: #faf9f5;
+    }
+
+    @media (max-width: 640px) {
+      .trial-axis-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .axis-cell {
+      padding: 10px 12px;
+      border-right: 1px solid var(--border-light);
+      font-family: var(--mono-font);
+      font-size: 11px;
+    }
+
+    .axis-cell:last-child {
+      border-right: none;
+    }
+
+    .axis-lbl {
+      font-size: 9px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 3px;
+    }
   </style>
 </head>
 <body>
@@ -1158,6 +1447,10 @@
           <button class="nav-btn" id="navSearchBtn" data-target="pageSearch">
             <span class="nav-marker"></span>
             <span>Search & Index</span>
+          </button>
+          <button class="nav-btn" id="navTrialBtn" data-target="pageTrial">
+            <span class="nav-marker"></span>
+            <span>Colorimetry Trial</span>
           </button>
         </nav>
       </div>
@@ -1381,6 +1674,130 @@
       </div>
     </div>
 
+    <!-- ==================================================== -->
+    <!-- VIEW 3: ΔE COLORIMETRY CHALLENGE PAGE                -->
+    <!-- ==================================================== -->
+    <div class="page-view" id="pageTrial">
+      <div class="trial-view-inner">
+
+        <!-- Header -->
+        <header class="search-page-header">
+          <div>
+            <div class="header-pretitle">Psychophysics & Perception Lab / CIE 1976 Trial</div>
+            <h1 class="header-main-title">ΔE Colorimetry Challenge</h1>
+          </div>
+          <p class="header-caption">
+            Calibrate the chromatic dial to match the specimen cover's dominant CIELAB signature without numerical hints. Scored by perceptual ΔE<sub>76</sub> distance.
+          </p>
+        </header>
+
+        <!-- Session Telemetry Strip -->
+        <section class="trial-telemetry-strip">
+          <div class="telemetry-cell">
+            <span class="telemetry-lbl">Trials Completed</span>
+            <span class="telemetry-val" id="trialCountVal">0</span>
+          </div>
+          <div class="telemetry-cell">
+            <span class="telemetry-lbl">Mean ΔE₇₆</span>
+            <span class="telemetry-val" id="trialMeanVal">—</span>
+          </div>
+          <div class="telemetry-cell">
+            <span class="telemetry-lbl">Best ΔE₇₆</span>
+            <span class="telemetry-val" id="trialBestVal">—</span>
+          </div>
+          <div class="telemetry-cell">
+            <span class="telemetry-lbl">JND Hits (≤ 2.3)</span>
+            <span class="telemetry-val" id="trialJndVal">0</span>
+          </div>
+        </section>
+
+        <!-- Two-Column Calibration Workbench -->
+        <section class="trial-workbench">
+          <!-- Left: Target Specimen -->
+          <div class="trial-pane">
+            <div class="trial-pane-header">
+              <span>Target Specimen</span>
+              <span id="trialDiscipline">—</span>
+            </div>
+            <div class="trial-specimen-stage">
+              <img id="trialTargetImg" src="" alt="Target Book Cover Specimen">
+            </div>
+            <div class="trial-specimen-footer">
+              <span id="trialAccession">Accession: Loading...</span>
+              <span>Match dominant cover tone</span>
+            </div>
+          </div>
+
+          <!-- Right: Calibration Dial -->
+          <div class="trial-pane">
+            <div class="trial-pane-header">
+              <span>Calibration Dial</span>
+              <span>Blind Mode (No Hex)</span>
+            </div>
+            <div class="trial-dial-body">
+              <div class="trial-wheel-wrap">
+                <canvas id="trialWheelCanvas" width="180" height="180"></canvas>
+                <div class="wheel-crosshair" id="trialWheelCrosshair"></div>
+              </div>
+
+              <div class="trial-brightness-row">
+                <span class="slider-tiny-lbl">0%</span>
+                <input type="range" id="trialBrightnessSlider" min="0" max="100" value="65" title="Luminance / Value">
+                <span class="slider-tiny-lbl">100%</span>
+              </div>
+
+              <div class="trial-guess-swatch-wrap">
+                <div class="trial-guess-swatch" id="trialGuessSwatch"></div>
+                <div class="trial-guess-caption">
+                  <span>Calibrated Field</span>
+                  <span id="trialGuessMask">Hidden Until Submission</span>
+                </div>
+              </div>
+
+              <div class="trial-actions-bar">
+                <button class="act-btn btn-main" id="btnTrialSubmit">Submit Calibration</button>
+                <button class="act-btn" id="btnTrialNext">Next Specimen</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Evaluation & Perceptual Ledger (Revealed on Submit) -->
+        <section class="trial-result-panel" id="trialResultPanel">
+          <div class="trial-pane-header">
+            <span>Optical Split-Field Comparison</span>
+            <span>Target (Left) vs. Calibration (Right)</span>
+          </div>
+          <div class="trial-split-field">
+            <div class="split-half" id="splitTargetHalf">Target</div>
+            <div class="split-half" id="splitGuessHalf">Your Calibration</div>
+          </div>
+          <div class="trial-result-body">
+            <div class="trial-grade-row">
+              <div class="trial-grade-title" id="trialGradeTitle">Grade I · Indistinguishable</div>
+              <div class="trial-delta-badge" id="trialDeltaBadge">ΔE₇₆ = 0.00</div>
+            </div>
+            <p class="trial-diagnostic-note" id="trialDiagnosticNote"></p>
+            <div class="trial-axis-grid">
+              <div class="axis-cell">
+                <div class="axis-lbl">Luminance Axis (ΔL*)</div>
+                <div id="trialAxisL">—</div>
+              </div>
+              <div class="axis-cell">
+                <div class="axis-lbl">Red–Green Axis (Δa*)</div>
+                <div id="trialAxisA">—</div>
+              </div>
+              <div class="axis-cell">
+                <div class="axis-lbl">Yellow–Blue Axis (Δb*)</div>
+                <div id="trialAxisB">—</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
   </main>
 
   <!-- ==================================================== -->
@@ -1457,8 +1874,9 @@
         const res = await fetch('./cover_colors_index.json');
         COVER_INDEX = await res.json();
         console.log(`Folioform Catalog loaded: ${COVER_INDEX.length} covers indexed.`);
-        // Run initial search
+        // Run initial search & initialize Colorimetry Trial
         performSearch();
+        loadNextTrialSpecimen();
       } catch (e) {
         console.error('Failed to load cover_colors_index.json:', e);
       }
@@ -1467,27 +1885,21 @@
     // ----------------------------------------------------
     // NAVIGATION CONTROLLER
     // ----------------------------------------------------
-    const navSearchBtn = document.getElementById('navSearchBtn');
-    const navPortraitBtn = document.getElementById('navPortraitBtn');
-    const pageSearch = document.getElementById('pageSearch');
-    const pagePortrait = document.getElementById('pagePortrait');
+    const navButtons = document.querySelectorAll('.nav-btn[data-target]');
+    const pageViews = document.querySelectorAll('.page-view');
 
-    function switchView(target) {
-      if (target === 'pageSearch') {
-        navSearchBtn.classList.add('active');
-        navPortraitBtn.classList.remove('active');
-        pageSearch.classList.add('active');
-        pagePortrait.classList.remove('active');
-      } else {
-        navPortraitBtn.classList.add('active');
-        navSearchBtn.classList.remove('active');
-        pagePortrait.classList.add('active');
-        pageSearch.classList.remove('active');
-      }
+    function switchView(targetId) {
+      navButtons.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.target === targetId);
+      });
+      pageViews.forEach(view => {
+        view.classList.toggle('active', view.id === targetId);
+      });
     }
 
-    navSearchBtn.addEventListener('click', () => switchView('pageSearch'));
-    navPortraitBtn.addEventListener('click', () => switchView('pagePortrait'));
+    navButtons.forEach(btn => {
+      btn.addEventListener('click', () => switchView(btn.dataset.target));
+    });
 
     // ----------------------------------------------------
     // COLOR MATH (CIELAB & RGB)
@@ -1603,12 +2015,14 @@
     let currentH = 0.015;
     let currentS = 0.76;
     let currentV = 0.64;
-    let isDraggingWheel = false;
 
-    function drawWheel() {
-      const ctx = wheelCanvas.getContext('2d');
-      const w = wheelCanvas.width;
-      const h = wheelCanvas.height;
+    /**
+     * Renders an HSV color wheel onto a square canvas and positions its crosshair.
+     */
+    function renderHsvWheel(canvasEl, crosshairEl, hVal, sVal, vVal) {
+      const ctx = canvasEl.getContext('2d');
+      const w = canvasEl.width;
+      const h = canvasEl.height;
       const cx = w / 2;
       const cy = h / 2;
       const r = cx - 1;
@@ -1618,16 +2032,16 @@
 
       for (let y = 0; y < h; y++) {
         for (let x = 0; x < w; x++) {
-          let dx = x - cx;
-          let dy = y - cy;
-          let dist = Math.sqrt(dx * dx + dy * dy);
-          let idx = (y * w + x) * 4;
+          const dx = x - cx;
+          const dy = y - cy;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          const idx = (y * w + x) * 4;
 
           if (dist <= r) {
             let angle = Math.atan2(dy, dx) * (180 / Math.PI);
             if (angle < 0) angle += 360;
-            let sat = Math.min(1, dist / r);
-            let [red, green, blue] = hsvToRgb(angle / 360, sat, currentV);
+            const sat = Math.min(1, dist / r);
+            const [red, green, blue] = hsvToRgb(angle / 360, sat, vVal);
             data[idx] = red;
             data[idx + 1] = green;
             data[idx + 2] = blue;
@@ -1645,50 +2059,58 @@
       ctx.lineWidth = 1;
       ctx.stroke();
 
-      let angleRad = currentH * 2 * Math.PI;
-      let distPx = currentS * r;
-      let px = cx + Math.cos(angleRad) * distPx;
-      let py = cy + Math.sin(angleRad) * distPx;
-      wheelCrosshair.style.left = px + 'px';
-      wheelCrosshair.style.top = py + 'px';
+      const angleRad = hVal * 2 * Math.PI;
+      const distPx = sVal * r;
+      crosshairEl.style.left = (cx + Math.cos(angleRad) * distPx) + 'px';
+      crosshairEl.style.top = (cy + Math.sin(angleRad) * distPx) + 'px';
     }
 
-    function handleWheelPick(e) {
-      const rect = wheelCanvas.getBoundingClientRect();
-      const cx = rect.width / 2;
-      const cy = rect.height / 2;
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const dx = x - cx;
-      const dy = y - cy;
-      const dist = Math.sqrt(dx * dx + dy * dy);
-      const r = cx - 1;
+    /**
+     * Binds pointer drag interaction to an HSV wheel canvas.
+     */
+    function bindWheelInteraction(canvasEl, onPick) {
+      let dragging = false;
 
-      let angle = Math.atan2(dy, dx) * (180 / Math.PI);
-      if (angle < 0) angle += 360;
+      function pickAt(e) {
+        const rect = canvasEl.getBoundingClientRect();
+        const cx = rect.width / 2;
+        const cy = rect.height / 2;
+        const dx = (e.clientX - rect.left) - cx;
+        const dy = (e.clientY - rect.top) - cy;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        const r = cx - 1;
 
-      currentH = angle / 360;
-      currentS = Math.min(1, dist / r);
+        let angle = Math.atan2(dy, dx) * (180 / Math.PI);
+        if (angle < 0) angle += 360;
 
-      let [red, green, blue] = hsvToRgb(currentH, currentS, currentV);
-      let hex = rgbToHex(red, green, blue);
+        onPick(angle / 360, Math.min(1, dist / r));
+      }
 
-      applyColor(hex, false);
+      canvasEl.addEventListener('pointerdown', (e) => {
+        dragging = true;
+        canvasEl.setPointerCapture(e.pointerId);
+        pickAt(e);
+      });
+
+      canvasEl.addEventListener('pointermove', (e) => {
+        if (dragging) pickAt(e);
+      });
+
+      canvasEl.addEventListener('pointerup', () => { dragging = false; });
+      canvasEl.addEventListener('pointercancel', () => { dragging = false; });
+    }
+
+    function drawWheel() {
+      renderHsvWheel(wheelCanvas, wheelCrosshair, currentH, currentS, currentV);
+    }
+
+    bindWheelInteraction(wheelCanvas, (h, s) => {
+      currentH = h;
+      currentS = s;
+      const [red, green, blue] = hsvToRgb(currentH, currentS, currentV);
+      applyColor(rgbToHex(red, green, blue), false);
       drawWheel();
       performSearch();
-    }
-
-    wheelCanvas.addEventListener('mousedown', (e) => {
-      isDraggingWheel = true;
-      handleWheelPick(e);
-    });
-
-    window.addEventListener('mousemove', (e) => {
-      if (isDraggingWheel) handleWheelPick(e);
-    });
-
-    window.addEventListener('mouseup', () => {
-      if (isDraggingWheel) isDraggingWheel = false;
     });
 
     brightnessSlider.addEventListener('input', (e) => {
@@ -2201,8 +2623,187 @@
       btnDownloadPortrait.textContent = 'Download High-Res Master Plate (PNG)';
     });
 
+    // ----------------------------------------------------
+    // ΔE COLORIMETRY CHALLENGE CONTROLLER
+    // ----------------------------------------------------
+    const trialWheelCanvas = document.getElementById('trialWheelCanvas');
+    const trialWheelCrosshair = document.getElementById('trialWheelCrosshair');
+    const trialBrightnessSlider = document.getElementById('trialBrightnessSlider');
+    const trialGuessSwatch = document.getElementById('trialGuessSwatch');
+    const trialGuessMask = document.getElementById('trialGuessMask');
+    const trialTargetImg = document.getElementById('trialTargetImg');
+    const trialDiscipline = document.getElementById('trialDiscipline');
+    const trialAccession = document.getElementById('trialAccession');
+    const btnTrialSubmit = document.getElementById('btnTrialSubmit');
+    const btnTrialNext = document.getElementById('btnTrialNext');
+    const trialResultPanel = document.getElementById('trialResultPanel');
+    const splitTargetHalf = document.getElementById('splitTargetHalf');
+    const splitGuessHalf = document.getElementById('splitGuessHalf');
+    const trialGradeTitle = document.getElementById('trialGradeTitle');
+    const trialDeltaBadge = document.getElementById('trialDeltaBadge');
+    const trialDiagnosticNote = document.getElementById('trialDiagnosticNote');
+    const trialAxisL = document.getElementById('trialAxisL');
+    const trialAxisA = document.getElementById('trialAxisA');
+    const trialAxisB = document.getElementById('trialAxisB');
+
+    const trialCountVal = document.getElementById('trialCountVal');
+    const trialMeanVal = document.getElementById('trialMeanVal');
+    const trialBestVal = document.getElementById('trialBestVal');
+    const trialJndVal = document.getElementById('trialJndVal');
+
+    let trialH = 0.08;
+    let trialS = 0.55;
+    let trialV = 0.65;
+    let currentTrialSpecimen = null;
+    let trialSubmitted = false;
+    const trialStats = { count: 0, totalDelta: 0, bestDelta: Infinity, jndHits: 0 };
+
+    function updateTrialDialUI() {
+      renderHsvWheel(trialWheelCanvas, trialWheelCrosshair, trialH, trialS, trialV);
+      const [r, g, b] = hsvToRgb(trialH, trialS, trialV);
+      trialGuessSwatch.style.backgroundColor = rgbToHex(r, g, b);
+    }
+
+    bindWheelInteraction(trialWheelCanvas, (h, s) => {
+      trialH = h;
+      trialS = s;
+      updateTrialDialUI();
+    });
+
+    trialBrightnessSlider.addEventListener('input', (e) => {
+      trialV = e.target.value / 100;
+      updateTrialDialUI();
+    });
+
+    function loadNextTrialSpecimen() {
+      if (!COVER_INDEX || COVER_INDEX.length === 0) return;
+
+      let candidate = COVER_INDEX[Math.floor(Math.random() * COVER_INDEX.length)];
+      if (currentTrialSpecimen && COVER_INDEX.length > 1) {
+        while (candidate.filename === currentTrialSpecimen.filename) {
+          candidate = COVER_INDEX[Math.floor(Math.random() * COVER_INDEX.length)];
+        }
+      }
+      currentTrialSpecimen = candidate;
+      trialSubmitted = false;
+
+      const cat = candidate.filename.includes('_')
+        ? candidate.filename.split('_')[0].replace(/-/g, ' ')
+        : 'General';
+
+      trialTargetImg.src = `./book-covers-sorted-by-colors/${candidate.folder}/${candidate.filename}`;
+      trialDiscipline.textContent = cat;
+      trialAccession.textContent = `Accession: ${candidate.filename}`;
+      trialGuessMask.textContent = 'Hidden Until Submission';
+      trialResultPanel.classList.remove('visible');
+      btnTrialSubmit.disabled = false;
+      btnTrialSubmit.style.opacity = '1';
+      btnTrialSubmit.style.cursor = 'pointer';
+    }
+
+    function classifyDeltaE(dE) {
+      if (dE <= 2.3) {
+        return {
+          title: 'Grade I · Indistinguishable (JND)',
+          note: 'Below the CIE Just Noticeable Difference threshold (ΔE ≤ 2.3). To most human observers under standard illumination, your calibration is perceptually indistinguishable from the target.'
+        };
+      }
+      if (dE <= 6.0) {
+        return {
+          title: 'Grade II · Archival Match',
+          note: 'High chromatic precision. Only subtle luminance or saturation differences are detectable upon direct side-by-side comparison.'
+        };
+      }
+      if (dE <= 12.0) {
+        return {
+          title: 'Grade III · Recognizable Kin',
+          note: 'Within the same perceptual color family, though tonal value or chroma diverges noticeably in the split-field view.'
+        };
+      }
+      if (dE <= 25.0) {
+        return {
+          title: 'Grade IV · Spectral Drift',
+          note: 'Moderate perceptual separation. Inspect the ΔL*, Δa*, and Δb* axis errors below to see whether luminance or hue caused the drift.'
+        };
+      }
+      return {
+        title: 'Grade V · Chromatic Mismatch',
+        note: 'Substantial perceptual distance from the specimen cover. Try locking luminance first, then refining hue angle and saturation.'
+      };
+    }
+
+    function contrastInk(rgb) {
+      const lum = (0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2]) / 255;
+      return lum > 0.55 ? '#121212' : '#ffffff';
+    }
+
+    function formatAxisError(diff, posLabel, negLabel) {
+      const sign = diff >= 0 ? '+' : '';
+      const dir = Math.abs(diff) < 1.5 ? 'On target' : (diff > 0 ? posLabel : negLabel);
+      return `${sign}${diff.toFixed(1)} (${dir})`;
+    }
+
+    btnTrialSubmit.addEventListener('click', () => {
+      if (!currentTrialSpecimen || trialSubmitted) return;
+      trialSubmitted = true;
+
+      const guessRgb = hsvToRgb(trialH, trialS, trialV);
+      const guessHex = rgbToHex(guessRgb[0], guessRgb[1], guessRgb[2]);
+      const guessLab = rgbToLab(guessRgb[0], guessRgb[1], guessRgb[2]);
+
+      const targetLab = currentTrialSpecimen.lab;
+      const targetHex = currentTrialSpecimen.hex;
+      const targetRgb = currentTrialSpecimen.rgb;
+
+      const dE = deltaE(guessLab, targetLab);
+      const dL = guessLab[0] - targetLab[0];
+      const da = guessLab[1] - targetLab[1];
+      const db = guessLab[2] - targetLab[2];
+
+      // Reveal calibrated hex & disable re-submission on same specimen
+      trialGuessMask.textContent = `${guessHex} · L*${Math.round(guessLab[0])}`;
+      btnTrialSubmit.disabled = true;
+      btnTrialSubmit.style.opacity = '0.5';
+      btnTrialSubmit.style.cursor = 'not-allowed';
+
+      // Split-field comparison
+      splitTargetHalf.style.backgroundColor = targetHex;
+      splitTargetHalf.style.color = contrastInk(targetRgb);
+      splitTargetHalf.textContent = `Target · ${targetHex}`;
+
+      splitGuessHalf.style.backgroundColor = guessHex;
+      splitGuessHalf.style.color = contrastInk(guessRgb);
+      splitGuessHalf.textContent = `Calibration · ${guessHex}`;
+
+      // Grade & diagnostics
+      const grade = classifyDeltaE(dE);
+      trialGradeTitle.textContent = grade.title;
+      trialDeltaBadge.textContent = `ΔE₇₆ = ${dE.toFixed(2)}`;
+      trialDiagnosticNote.textContent = grade.note;
+
+      trialAxisL.textContent = formatAxisError(dL, 'Too bright', 'Too dark');
+      trialAxisA.textContent = formatAxisError(da, 'Too red/magenta', 'Too green');
+      trialAxisB.textContent = formatAxisError(db, 'Too yellow', 'Too blue');
+
+      trialResultPanel.classList.add('visible');
+
+      // Update session telemetry
+      trialStats.count += 1;
+      trialStats.totalDelta += dE;
+      if (dE < trialStats.bestDelta) trialStats.bestDelta = dE;
+      if (dE <= 2.3) trialStats.jndHits += 1;
+
+      trialCountVal.textContent = trialStats.count;
+      trialMeanVal.textContent = (trialStats.totalDelta / trialStats.count).toFixed(2);
+      trialBestVal.textContent = trialStats.bestDelta.toFixed(2);
+      trialJndVal.textContent = trialStats.jndHits;
+    });
+
+    btnTrialNext.addEventListener('click', loadNextTrialSpecimen);
+
     // Initialize Wheel & Load Data
     drawWheel();
+    updateTrialDialUI();
     applyColor('#A33327', true);
     loadCatalogIndex();
   </script>
